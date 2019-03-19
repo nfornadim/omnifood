@@ -1,0 +1,152 @@
+.navigation {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  
+  &__brand-box {
+    float: left;
+    margin-top: 2rem;
+  }
+
+  &__brand {
+    height: 10rem;
+
+    &--sticky {
+      height: 5rem;
+      display: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    float: right;
+    margin-top: 5.5rem;
+
+    //For Mobile Navabr
+    @include respond(tab-port) {
+      display: none;
+      float: left;
+      margin-top: 4.5rem;
+      margin-left: 2.5rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited{
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white;
+      font-family: $font-family;
+      padding: .8rem 0;
+      transition: all .2s;
+      border-bottom: 2px solid transparent;
+      margin-left: 4rem;
+
+      //For Mobile Navabr
+      @include respond(tab-port) {
+        border-bottom: none; //bez in mobile there is no hover option
+        padding: 1rem 0;
+        font-size: 2rem;
+      }
+
+    }
+
+    &:hover,
+    &:active {
+      border-bottom: 2px solid $color-attention-light;
+
+      @include respond(tab-port) {
+        border-bottom: none; //bez in mobile there is no hover option
+      }
+    }
+  }
+}
+
+//Sticky Navigation Bar
+.navigation__sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .98);
+  box-shadow: 0 2px 2px #efefef;
+
+  .navigation__brand-box {
+    margin: .5rem 0;
+  }
+
+  .navigation__link {
+
+    &,
+    &:link,
+    &:visited{
+      color: #555;
+      padding: 1.8rem 0;
+      margin-left: 3.8rem;
+
+      //Show nav-button in mobile
+      @include respond(tab-port) {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  //TO change brand image from white to black
+  .navigation__brand {
+    display: none;
+
+    &--sticky { display: block;};
+  }
+
+  .navigation__list {
+    margin-top: 1.5rem;
+
+    //Show nav-button in mobile
+    @include respond(tab-port) {
+      margin-top: 1rem;
+     
+    }
+  }
+
+  @include respond(tab-port) {
+    .navigation__mobile {
+      margin-top: 1rem;
+
+      .icon {
+       color: #555;
+      }
+    }
+  }
+}
+
+
+//Navigation in Mobile Phones
+.navigation__mobile {
+  float: right;
+  margin-top: 3rem;
+  cursor: pointer;  //Bez href class is not defined
+  display: none;
+
+  .icon {
+    font-size: 3.2rem;
+    color: #fff;
+  }
+
+
+  //Show nav-button in mobile
+  @include respond(tab-port) {
+    display: inline-block;
+  }
+}

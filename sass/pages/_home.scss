@@ -1,0 +1,200 @@
+.section-features {
+  padding: 8rem 0;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+}
+
+.section-meals {
+  padding: 0;
+}
+
+.section-steps {
+  padding: 8rem 0;
+  background-color: $color-grey-light;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+
+  &__box {
+
+    &:first-of-type {
+      text-align: right; //as image is an inline-block element
+      padding-right: 3%;
+      margin-top: 3rem;
+
+      @include respond(tab-land) {
+        margin-top: 1rem;
+      }
+
+      @include respond(tab-port) {
+        margin-top: .5rem;
+      }
+
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+
+    &:last-of-type {
+      padding-left: 3%;
+      margin-top: 7rem;
+
+      @include respond(tab-land) {
+        margin-top: 4rem;
+      }
+
+      @include respond(tab-port) {
+        margin-top: 3rem;
+      }
+    }
+  }
+  &__look {
+    width: 40%;
+
+    @include respond(tab-land) {
+      width: 50%;
+    }
+
+    @include respond(phone) {
+      width: 30%;
+    }
+  }
+
+  &__description {
+    margin-bottom: 5rem;
+
+    @include respond(tab-land) {
+      margin-bottom: 3rem;
+      font-size: 1.9rem;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    &:last-of-type {
+      margin-bottom: 8rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 6rem;
+      }
+
+      @include respond(tab-port) {
+        margin-bottom: 4rem;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--num {
+      color: $color-attention-light;
+      border: 2px solid;
+      text-align: center;
+      color: $color-attention-light;
+      border-radius: 50%;
+      width: 5.5rem;
+      height: 5.5rem;
+      float: left;
+      font-size: 3rem;
+      margin-right: 2.5rem;
+      padding: 3px;
+
+      @include respond(phone) {
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 3px;
+        font-size: 2.2rem;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__button {
+    height: 5rem;
+    width: auto;
+    margin-right: 1rem;
+
+    @include respond(tab-port) {
+      height: 4rem;
+      margin-left: 1.5rem;
+      
+    }
+  }
+}
+
+
+.section-cities {
+  padding: 8rem 0;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+}
+
+.section-testimonial {
+  padding: 8rem 0;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, .8), 
+    rgba(0, 0, 0, .8)), 
+    url(../img/back-customers.jpg);
+  background-size: cover;
+  color: $color-white;
+  background-attachment: fixed;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+}
+
+.section-plan {
+  padding: 8rem 0;
+  background-color: $color-grey-light;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+
+    .col {
+      width: 60%;
+      margin-left: 20%;
+      margin-bottom: 4%;
+    } 
+  }
+}
+
+.section-form {
+  padding: 8rem 0;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+}

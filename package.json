@@ -1,0 +1,18 @@
+{
+  "name": "fooodz",
+  "version": "1.0.0",
+  "description": "This is a online food ordering website",
+  "main": "app.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "Nadim Khan",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

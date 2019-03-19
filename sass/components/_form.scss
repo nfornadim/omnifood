@@ -1,0 +1,24 @@
+.form {
+  width: 60%;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    width: 80%;
+  }
+
+
+  // &__label {
+  //   color: $color-grey;
+  // }
+  &__input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-attention-dark;
+    }
+  }
+}
